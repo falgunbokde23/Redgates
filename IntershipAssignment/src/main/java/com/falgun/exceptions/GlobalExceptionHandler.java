@@ -12,9 +12,6 @@ import org.springframework.web.context.request.WebRequest;
 public class GlobalExceptionHandler {
 
 	
-	
-	
-	
 	@ExceptionHandler(signUpException.class)
 	public ResponseEntity<MyErrorDetails> customerExceptionHandler(signUpException se, WebRequest req){
 		
@@ -53,7 +50,6 @@ public class GlobalExceptionHandler {
 			err.setDetails(req.getDescription(false));
 				
 		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.INTERNAL_SERVER_ERROR);
-		
 	}
 	
 	
